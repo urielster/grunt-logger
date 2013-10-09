@@ -75,7 +75,7 @@ module.exports = function(grunt) {
 
 
 grunt.initConfig({
-  logger{
+  logger:{
     prod: {
       option: {
         separator: ','
