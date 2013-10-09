@@ -26,14 +26,24 @@ module.exports = function(grunt) {
       logItems = data.logItems,
       sep = grunt.util.linefeed,
       logData = "";
-    //Check file existence
 
+    //Some validations
+    if (_.size(logItems) <= 0){
+      grunt.log.error('No Items in logItems!');return;
+    }else if (typeof dest !== 'string' || dest.length <= 0 ) {
+      grunt.log.error('No destination specified!');return;
+    }
+
+    //Build log line
     _.each(logItems,function(value,key){
       logLineArr.push(value);
       logLineArr.push(options.separator);
     });
+
+    logLineArr.pop();  // the pop is to remove last separator
     logLine = logLineArr.join('');
 
+    //Read file if exists
     if (!grunt.file.exists(dest)) {
       grunt.log.warn('Source file "' + dest + '" not found. it will be created now');
     }  else {

@@ -1,8 +1,8 @@
 {
   "name": "grunt-logger",
   "description": "Logging data for each Grunt deployment in files",
-  "version": "0.1.2",
-  "homepage": "https://github.com//Users/urielster/grunt-logger",
+  "version": "0.1.5",
+  "homepage": "https://github.com/urielster/grunt-logger",
   "author": {
     "name": "urielster",
     "email": "uriel.elster@gmail.com",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com//Users/urielster/grunt-logger.git"
+    "url": "git://github.com/urielster/grunt-logger.git"
   },
   "bugs": {
-    "url": "https://github.com//Users/urielster/grunt-logger/issues"
+    "url": "https://github.com/urielster/grunt-logger/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com//Users/urielster/grunt-logger/blob/master/LICENSE-MIT"
+      "url": "https://github.com/urielster/grunt-logger/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
@@ -29,15 +29,18 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-nodeunit": "~0.2.1",
     "grunt": "~0.4.1"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
   },
   "keywords": [
-    "gruntplugin" , "logger","log"  , "grunt-logger"
+    "gruntplugin",
+    "logger",
+    "log",
+    "grunt-logger"
   ]
 }

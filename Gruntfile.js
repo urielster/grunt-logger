@@ -32,20 +32,17 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     logger: {
       default_options: {
-        options: {
+        option: {
+          separator: ','
         },
-        files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
+        destination: "tmp/default.log",
+        logItems: {
+          "item1": "1234",
+          "item2": "567",
+          "item3": "89",
+          "item4": "10"
         }
-      },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
+
       }
     },
 
@@ -72,28 +69,3 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['jshint', 'test']);
 
 };
-
-
-grunt.initConfig({
-  logger:{
-    prod: {
-      option: {
-        separator: ','
-      },
-      destination: "log/prod.log",
-      logLine: "<%= pkg.name %>,<%= project_target %>,<%= now %>",
-      logItems: {
-        "date": grunt.template.today('yyyy-mm-dd hh:mm:ss'),
-        "version": "456",
-        "project": "<%= pkg.name %>",
-        "environment": "<%= project_target %>"
-      }
-    },
-    test: {
-      destination: "log/test.log",
-      logLine: "<%= pkg.name %>,<%= project_target %>,<%= now %>",
-      options: {
-      }
-    }
-  }
-});
