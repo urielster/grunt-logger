@@ -67,16 +67,19 @@ Type: `Object`
 Mandatory: Object that holds the items to be added to the log line. only the values of the properties will be added to the log line
 
 so if i want to add a lines like this:
+```js
 1/1/2000 12:00, project1, test
 1/1/2000 12:01, project2, test
+```
 
-so the logItems will look like:
+the logItems will look like:
+```js
 logItems:{
   'date': grunt.template.today('mm-dd-yyyy hh:mm'),
   'project': '<%= pkg.name %>',
   'environment': 'test'
 }
-
+```
 ### Options
 
 #### options.separator

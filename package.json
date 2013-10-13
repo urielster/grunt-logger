@@ -1,7 +1,7 @@
 {
   "name": "grunt-logger",
   "description": "Logging data for each Grunt deployment in files",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://github.com/urielster/grunt-logger",
   "author": {
     "name": "urielster",
